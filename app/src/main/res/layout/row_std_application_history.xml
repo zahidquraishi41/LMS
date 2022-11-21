@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorAppBackground"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDateApplied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="normal"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivApplicationStatus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/application_accepted"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="15dp"
+        />
+
+</RelativeLayout>

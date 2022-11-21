@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppBackground"
+    tools:context=".HODAdminLoginActivity"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgLMSIcon"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:src="@drawable/lms"
+                android:transitionName="imgLMSIcon"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvWelcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Welcome Back!"
+                android:layout_marginBottom="40dp"
+                android:textColor="#FFFFFF"
+                android:textSize="27sp"
+                android:transitionName="tvWelcomeText"
+                android:typeface="monospace" />
+
+            <!--Error Message-->
+            <TextView
+                android:id="@+id/tvErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:typeface="monospace" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="UserID"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/user"
+                    android:drawablePadding="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:inputType="text"
+                    android:typeface="monospace"
+                    android:hint="Username" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:transitionName="Password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:inputType="textPassword"
+                    android:drawableStart="@drawable/password"
+                    android:typeface="monospace"
+                    android:drawablePadding="15dp"
+                    android:hint="Password" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="end"
+                android:onClick="ForgotPassword"
+                android:text="Forgot Password?"
+                android:textSize="17sp"
+                android:textColor="#089FF3" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="Login"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_bg"
+                android:text="Login"
+                android:onClick="Login"
+                android:typeface="monospace"
+                android:textAllCaps="false"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

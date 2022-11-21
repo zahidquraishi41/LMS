@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#2F2F3C"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnAcceptApplication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg4"
+        android:textSize="17sp"
+        android:typeface="monospace"
+        android:text="Accept Application" />
+
+    <Button
+        android:id="@+id/btnDeclineApplication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg4"
+        android:textSize="17sp"
+        android:typeface="monospace"
+        android:text="Decline Application" />
+
+    <Button
+        android:id="@+id/btnViewAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg4"
+        android:typeface="monospace"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:text="View Attachment" />
+
+    <Button
+        android:id="@+id/btnCallParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg4"
+        android:typeface="monospace"
+        android:textSize="17sp"
+        android:text="Call Parent" />
+
+</LinearLayout>

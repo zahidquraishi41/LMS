@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAppBackground"
+    tools:context=".AdminMainActivity">
+
+    <LinearLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <!--Info Bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/student_info_bar_bg"
+            android:orientation="vertical">
+
+            <!--Profile Picture & Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/student_profile_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:onClick="UpdatePicture"
+                    android:src="@drawable/default_picture" />
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!--Info Bar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/student_info_bar_bg"
+                android:baselineAligned="false"
+                android:divider="@drawable/my_divider"
+                android:dividerPadding="22dp"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalStudents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Students"
+                        android:textColor="#c5c9cf"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalHODs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textSize="22sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Hods"
+                        android:textColor="#c5c9cf"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalDepartments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textSize="22sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Departments"
+                        android:textColor="#c5c9cf"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Options-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="MyProfile"
+                android:paddingStart="30dp"
+                android:text=" My Profile"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/add_user"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="AddHOD"
+                android:paddingStart="30dp"
+                android:text=" Add HOD"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/delete_user"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="RemoveHOD"
+                android:paddingStart="30dp"
+                android:text=" Remove HOD"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/settings"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="Settings"
+                android:paddingStart="30dp"
+                android:text=" Settings"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/logout"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="Logout"
+                android:paddingStart="30dp"
+                android:text=" Logout"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

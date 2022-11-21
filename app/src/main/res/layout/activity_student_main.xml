@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/student_info_bar_bg"
+    android:backgroundTint="#101f20ff"
+    tools:context=".StudentMainActivity">
+
+    <LinearLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/student_info_bar_bg"
+            android:orientation="vertical">
+
+            <!--Profile Picture & Name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/student_profile_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:onClick="UpdatePicture"
+                    android:src="@drawable/default_picture" />
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!--Info Bar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/student_info_bar_bg"
+                android:baselineAligned="false"
+                android:divider="@drawable/my_divider"
+                android:dividerPadding="22dp"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalLeave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:typeface="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Leave\nApplied"
+                        android:textColor="#c5c9cf"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvLeaveAccepted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textSize="22sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Leave\nAccepted"
+                        android:textColor="#c5c9cf"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAttendance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="100%"
+                        android:textSize="20sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Attendance"
+                        android:textColor="#c5c9cf"
+                        android:textSize="16sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Options-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableStart="@drawable/user"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="UpdateProfile"
+                android:paddingStart="30dp"
+                android:text=" My Profile"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/apply_for_leave"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="ApplyForLeave"
+                android:paddingStart="30dp"
+                android:text=" Apply"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/application_status"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="ApplicationStatus"
+                android:paddingStart="30dp"
+                android:text=" Status"
+
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/applications_list"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="ApplicationHistory"
+                android:paddingStart="30dp"
+                android:text=" History"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/logout"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:onClick="Logout"
+                android:paddingStart="30dp"
+                android:text=" Logout"
+                android:textSize="21sp"
+                android:typeface="monospace" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
